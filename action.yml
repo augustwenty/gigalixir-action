@@ -1,4 +1,4 @@
-name: 'Gigalixir Action'
+name: 'a20 Gigalixir Action'
 description: 'Deploy to Gigalixir'
 inputs:
   APP_SUBFOLDER:
