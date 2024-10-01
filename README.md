@@ -26,7 +26,7 @@ deploy:
       with:
         python-version: 3.8.1
         
-    - uses: mhanberg/gigalixir-action@<current release>
+    - uses: augustwenty/gigalixir-action@v1.0.1
       with:
         APP_SUBFOLDER: my-app-subfolder  # Add only if you want to deploy an app that is not at the root of your repository
         GIGALIXIR_APP: my-gigalixir-app # Feel free to also put this in your secrets
