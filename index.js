@@ -126,7 +126,7 @@ async function run() {
 
       try {
         await core.group("Running migrations", async () => {
-          await exec.exec(`gigalixir ps:migrate -a ${gigalixirApp}`)
+          await exec.exec(`gigalixir ps:migrate -o "-tt" -a ${gigalixirApp}`)
         });
       } catch (error) {
         if (currentRelease === 0) {
@@ -134,7 +134,7 @@ async function run() {
         } else {
           core.warning(`Migration failed, rolling back to the previous release: ${currentRelease}`);
           await core.group("Rolling back", async () => {
-            await exec.exec(`gigalixir releases:rollback -a ${gigalixirApp}`)
+            await exec.exec(`gigalixir releases:rollback -o "-tt" -a ${gigalixirApp}`)
           });
         }
 
