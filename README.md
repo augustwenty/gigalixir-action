@@ -51,5 +51,6 @@ If your migrations fail, the action will rollback the app to the last version.
 
 Remember to 
 
+
 - `npm install`
 - `npm run package`
